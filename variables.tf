@@ -3,12 +3,7 @@ variable "instance_name" {
   description = "descripcion"
 }
 
-variable "inmachine_type" {
-  type        = string
-  description = "descripcion"
-}
-
-variable "instance_name" {
+variable "machine_type" {
   type        = string
   description = "descripcion"
 }
@@ -42,5 +37,13 @@ variable "account_id" {
   type        = string
   description = "descripcion"
 }
+
+variable "vpc-prueba-gitops" {
+  type        = string
+  description = "descripcion"
+}
+
+
+
 
 
