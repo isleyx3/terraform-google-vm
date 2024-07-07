@@ -43,6 +43,6 @@ resource "google_service_account" "service_account" {
 }
 
 data "google_compute_network" "vpc-prueba" {
-  name = "vpc-prueba-gitops"
-  project      = var.project
+  name = var.vpc_name
+  project = var.project
 }

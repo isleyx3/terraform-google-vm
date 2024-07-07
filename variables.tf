@@ -38,7 +38,7 @@ variable "account_id" {
   description = "descripcion"
 }
 
-variable "vpc-prueba-gitops" {
+variable "vpc_name" {
   type        = string
   description = "descripcion"
 }
