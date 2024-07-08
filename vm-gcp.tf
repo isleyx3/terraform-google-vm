@@ -22,7 +22,7 @@ resource "google_compute_instance" "default" {
   }
 
   network_interface {
-    network = data.google_compute_network.id
+    network = data.google_compute_network.vpc-prueba.id
 
     access_config {
       // Ephemeral public IP
@@ -31,7 +31,7 @@ resource "google_compute_instance" "default" {
 
   service_account {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-    email  = google_service_account.id
+    email  = google_service_account.service_account.id
     scopes = ["cloud-platform"]
   }
 }
