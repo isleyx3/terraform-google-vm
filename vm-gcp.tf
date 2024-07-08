@@ -23,7 +23,7 @@ resource "google_compute_instance" "default" {
 
   network_interface {
     network = data.google_compute_network.vpc-prueba.id
-    subnetwork = data.google_compute_subnetwork.id
+    subnetwork = data.google_compute_subnetwork.teste-sub.id
 
     access_config {
       // Ephemeral public IP
@@ -48,7 +48,7 @@ data "google_compute_network" "vpc-prueba" {
   project = var.project
 }
 
-data "google_compute_subnetwork" "my-subnetwork" {
+data "google_compute_subnetwork" "teste-sub" {
   project = var.project
   name   = "test-subnetwork"
   region = "us-central1"
