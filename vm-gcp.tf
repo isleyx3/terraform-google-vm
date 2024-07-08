@@ -46,3 +46,8 @@ data "google_compute_network" "vpc-prueba" {
   name = var.vpc_name
   project = var.project
 }
+
+provider "google" {
+  project = var.project
+  credentials = var.gcp_credentials
+}
