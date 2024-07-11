@@ -32,15 +32,13 @@ resource "google_compute_instance" "default" {
 
   service_account {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-    email  = google_service_account.service_account.email
+    email  = data.google_service_account.cuenta-prueba.email
     scopes = ["cloud-platform"]
   }
 }
 
-resource "google_service_account" "service_account" {
-  account_id   = var.account_id
-  display_name = "Service Account"
-  project      = var.project
+data "google_service_account" "cuenta-prueba" {
+  account_id = "prueba-vm@bx-icloud-sandbox.iam.gserviceaccount.com"
 }
 
 data "google_compute_network" "vpc-prueba" {
