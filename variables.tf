@@ -33,11 +33,6 @@ variable "project" {
   description = "descripcion"
 }
 
-variable "account_id" {
-  type        = string
-  description = "descripcion"
-}
-
 variable "vpc_name" {
   type        = string
   description = "descripcion"
