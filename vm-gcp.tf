@@ -51,3 +51,5 @@ data "google_compute_subnetwork" "teste-sub" {
   name   = "test-subnetwork"
   region = "us-central1"
 }
+
+#nada
