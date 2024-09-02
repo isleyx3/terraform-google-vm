@@ -1,4 +1,6 @@
 
+#### PRUEBA ####
+
 resource "google_compute_instance" "default" {
   name         = var.instance_name
   machine_type = var.machine_type
@@ -51,3 +53,5 @@ data "google_compute_subnetwork" "teste-sub" {
   name   = "test-subnetwork"
   region = "us-central1"
 }
+
+#nada
